@@ -1,0 +1,5 @@
+# Cloudflare Pages — redirects
+# https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# Пример: проброс старых URL.
+# /old-page  /  301

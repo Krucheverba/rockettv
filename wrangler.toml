@@ -1,0 +1,10 @@
+# Конфиг для деплоя Cloudflare Pages через wrangler CLI.
+# Использование:
+#   npx wrangler pages deploy . --project-name=rockettv
+#
+# Документация:
+#   https://developers.cloudflare.com/pages/platform/wrangler/
+
+name = "rockettv"
+pages_build_output_dir = "."
+compatibility_date = "2025-06-25"

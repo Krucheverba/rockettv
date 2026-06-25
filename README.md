@@ -22,6 +22,32 @@ npx serve .
 
 Подходит любая статика: GitHub Pages, Netlify, Vercel, Cloudflare Pages, S3.
 
+### Cloudflare Pages (рекомендуется)
+
+В репозитории уже лежит всё, что нужно Cloudflare:
+
+- `_headers` — security-заголовки (CSP, HSTS, X-Frame-Options и т.д.) и cache-control
+- `_redirects` — задел под редиректы
+- `404.html` — кастомная 404, Cloudflare Pages подхватывает её автоматически
+- `wrangler.toml` — для деплоя через CLI
+
+**Вариант 1. Через Dashboard (Git-интеграция):**
+
+1. Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git.
+2. Выбрать репозиторий `Krucheverba/rockettv`, ветку `main`.
+3. Build settings:
+   - Framework preset: `None`
+   - Build command: *(оставить пустым)*
+   - Build output directory: `/`
+4. Save and Deploy. После пуша в `main` Cloudflare задеплоит автоматически.
+
+**Вариант 2. Через wrangler CLI:**
+
+```bash
+npx wrangler login
+npx wrangler pages deploy . --project-name=rockettv
+```
+
 ### GitHub Pages
 
 1. Settings → Pages → Source: `Deploy from a branch`

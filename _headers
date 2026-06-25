@@ -1,0 +1,32 @@
+# Cloudflare Pages — HTTP headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; object-src 'none'; upgrade-insecure-requests
+
+# HTML — почти не кешируем, чтобы правки прилетали сразу
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS / JS — кеш на час, у нас нет хеша в имени файла
+/*.css
+  Cache-Control: public, max-age=3600, must-revalidate
+/*.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Картинки / иконки — длинный кеш
+/*.svg
+  Cache-Control: public, max-age=2592000, immutable
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+/*.webp
+  Cache-Control: public, max-age=2592000, immutable
+/*.ico
+  Cache-Control: public, max-age=2592000, immutable
