@@ -1,0 +1,16 @@
+# Файлы, которые не должны попадать в публичные ассеты воркера.
+wrangler.toml
+.assetsignore
+.gitignore
+.git/
+.vscode/
+README.md
+node_modules/
+*.log
+.env
+.env.*
+
+# _headers и _redirects — формат Cloudflare Pages, на Workers Static Assets
+# не работают и не должны раздаваться как публичные файлы.
+_headers
+_redirects

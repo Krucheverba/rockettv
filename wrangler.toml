@@ -1,10 +1,16 @@
-# Конфиг для деплоя Cloudflare Pages через wrangler CLI.
-# Использование:
-#   npx wrangler pages deploy . --project-name=rockettv
+# Cloudflare Workers — конфиг для деплоя статики через Workers Static Assets.
+# Этот режим работает без Worker-скрипта: Cloudflare сам отдаёт файлы из корня
+# и возвращает /404.html для несуществующих путей.
 #
-# Документация:
-#   https://developers.cloudflare.com/pages/platform/wrangler/
+# Локальный деплой:
+#   npx wrangler login
+#   npx wrangler deploy
+#
+# Документация: https://developers.cloudflare.com/workers/static-assets/
 
 name = "rockettv"
-pages_build_output_dir = "."
-compatibility_date = "2025-06-25"
+compatibility_date = "2025-09-23"
+
+[assets]
+directory = "./"
+not_found_handling = "404-page"
