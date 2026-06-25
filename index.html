@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0A0E1A" />
+<title>RDDU-1 — Ваш холодильник может зарабатывать</title>
+<meta name="description" content="Цифровая дверь-витрина для торгового холодильника: реклама, +8% к продажам, данные с POS. Три способа подключения, окупаемость 9–12 месяцев." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr" id="top">
+  <div class="wrap hdr__inner">
+    <a class="logo" href="#top" aria-label="RDDU-1">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">RDDU<span>-1</span></span>
+    </a>
+    <nav class="nav" aria-label="Главная навигация">
+      <a href="#streams">Доходы</a>
+      <a href="#math">Расчёт</a>
+      <a href="#ways">Подключение</a>
+      <a href="#vs">Сравнение</a>
+      <a href="#fit">Совместимость</a>
+    </nav>
+    <a class="btn btn--primary btn--sm" href="#cta">Заявка</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <span class="eyebrow">Для собственников торговых сетей и HoReCa</span>
+      <h1 class="h1">
+        Ваш холодильник <br />
+        <span class="grad">может зарабатывать.</span>
+      </h1>
+      <p class="lead">
+        Меняем стекло двери на цифровую витрину RDDU-1. Та же дверь — но с экраном,
+        рекламой брендов, остатками из POS и аналитикой в реальном времени.
+        Три потока выручки на одном квадратном метре.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#cta">Получить расчёт под мой парк</a>
+        <a class="btn btn--ghost" href="#ways">Как подключиться</a>
+      </div>
+      <ul class="hero__bullets" role="list">
+        <li><b>+8%</b> к продажам категории</li>
+        <li><b>9–12 мес</b> окупаемость</li>
+        <li><b>~$2 000</b> в год с двери</li>
+      </ul>
+    </div>
+
+    <!-- DOOR MOCKUP -->
+    <div class="hero__mock" aria-hidden="true">
+      <div class="door" id="door">
+        <div class="door__frame">
+          <div class="door__handle"></div>
+          <div class="door__screen">
+            <div class="screen__glare"></div>
+
+            <!-- Ad slide -->
+            <div class="ad ad--show" data-ad="0">
+              <div class="ad__brand">PEPSI MAX</div>
+              <div class="ad__title">Холоднее. Дерзче.</div>
+              <div class="ad__sub">−15% сегодня</div>
+              <div class="ad__bottle"></div>
+            </div>
+            <div class="ad" data-ad="1">
+              <div class="ad__brand">RED BULL</div>
+              <div class="ad__title">Энергия рядом</div>
+              <div class="ad__sub">Полка 2 · 4 банки</div>
+              <div class="ad__bottle ad__bottle--red"></div>
+            </div>
+            <div class="ad" data-ad="2">
+              <div class="ad__brand">МОЛОКО · ЭКО-ФЕРМА</div>
+              <div class="ad__title">Свежая поставка</div>
+              <div class="ad__sub">2 ч назад</div>
+              <div class="ad__bottle ad__bottle--milk"></div>
+            </div>
+
+            <!-- Live HUD overlays -->
+            <div class="hud hud--tl">
+              <span class="hud__dot"></span> LIVE
+            </div>
+            <div class="hud hud--tr">
+              <span class="hud__label">Взгляды/час</span>
+              <span class="hud__val" id="views">128</span>
+            </div>
+            <div class="hud hud--bl">
+              <span class="hud__label">Sales Lift</span>
+              <span class="hud__val hud__val--up">+8.0%</span>
+            </div>
+            <div class="hud hud--br">
+              <span class="hud__label">Остаток · POS</span>
+              <span class="hud__val">SKU 14 · 62%</span>
+            </div>
+
+            <!-- progress bar -->
+            <div class="progress"><i></i></div>
+          </div>
+        </div>
+        <div class="door__shelf">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="floor"></div>
+      <div class="badge-roi">
+        <span>ROI</span>
+        <b>~28.5%</b>
+      </div>
+      <div class="badge-haas">
+        <span>HaaS</span>
+        <b>0 ₽ CAPEX</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STREAMS -->
+<section class="section" id="streams">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="eyebrow">Три потока дохода</span>
+      <h2 class="h2">Одна дверь — три источника выручки</h2>
+      <p class="sec-sub">Реклама, прирост продаж и данные. Работают одновременно, а не по очереди.</p>
+    </header>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card__icon">📺</div>
+        <h3>Реклама на дверце</h3>
+        <p>Контракты с FMCG-брендами и локальными игроками. Гарантированные показы, измеримая аудитория, формат — как наружка, только у самой полки.</p>
+        <div class="card__tag">CPM-модель</div>
+      </article>
+      <article class="card card--accent">
+        <div class="card__icon">📈</div>
+        <h3>+8% к продажам</h3>
+        <p>Витрина подсвечивает товар в момент решения. По нашим пилотам — средний прирост продаж представленных SKU около <b>+8%</b>.</p>
+        <div class="card__tag">Sales Lift</div>
+      </article>
+      <article class="card">
+        <div class="card__icon">🧠</div>
+        <h3>Данные и аналитика</h3>
+        <p>Просмотры, конверсия в касание, остатки из POS, эффективность акций. Свой кабинет и API — либо готовые отчёты раз в неделю.</p>
+        <div class="card__tag">Dashboards · API</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MATH -->
+<section class="section section--alt" id="math">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="eyebrow">Модельный расчёт</span>
+      <h2 class="h2">Четыре цифры, которые важны собственнику</h2>
+      <p class="sec-sub">Расчёт на одну дверь в среднем по сети. Ориентир по модели — не оферта и не гарантия.</p>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num">~$2K</div>
+        <div class="stat__lab">Доход в год с двери</div>
+        <div class="stat__hint">Реклама + Sales Lift</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">9–12<span>мес</span></div>
+        <div class="stat__lab">Окупаемость</div>
+        <div class="stat__hint">CAPEX-сценарий</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">~28.5<span>%</span></div>
+        <div class="stat__lab">ROI</div>
+        <div class="stat__hint">К концу 1-го года</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">50–70<span>%</span></div>
+        <div class="stat__lab">Маржа оператора</div>
+        <div class="stat__hint">После шеринга с собственником</div>
+      </div>
+    </div>
+
+    <p class="disclaimer">
+      * Цифры приведены как ориентир по бизнес-модели и не являются публичной офертой
+      или гарантией дохода. Фактические показатели зависят от трафика точки, ассортимента,
+      рекламных контрактов и условий шеринга. Точный расчёт — после аудита парка.
+    </p>
+  </div>
+</section>
+
+<!-- WAYS -->
+<section class="section" id="ways">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="eyebrow">Три способа подключиться</span>
+      <h2 class="h2">Выберите формат под свой парк</h2>
+      <p class="sec-sub">От замены одного стекла до полной замены оборудования с трейд-ином.</p>
+    </header>
+
+    <div class="ways">
+      <article class="way">
+        <div class="way__top">
+          <span class="way__num">01</span>
+          <span class="way__chip">CAPEX</span>
+        </div>
+        <h3>Только дверца</h3>
+        <p class="way__lead">Меняем стекло на RDDU-1 прямо на штатной раме холодильника. Быстрый монтаж, без замены корпуса.</p>
+        <ul class="way__list">
+          <li>Совместимость с модулем 600 мм</li>
+          <li>Установка за смену</li>
+          <li>Гарантия и сервис</li>
+        </ul>
+        <div class="way__price">
+          <span>стоимость</span><b>—</b><i>по запросу</i>
+        </div>
+        <a class="btn btn--ghost btn--block" href="#cta" data-prefill="door">Запросить расчёт</a>
+      </article>
+
+      <article class="way way--featured">
+        <div class="way__ribbon">Без вложений</div>
+        <div class="way__top">
+          <span class="way__num">02</span>
+          <span class="way__chip way__chip--accent">HaaS · Revenue share</span>
+        </div>
+        <h3>Дверца по подписке</h3>
+        <p class="way__lead">Мы ставим RDDU-1 за свой счёт. Собственник получает долю с рекламной выручки и +8% продаж. Никаких капвложений.</p>
+        <ul class="way__list">
+          <li>0 ₽ CAPEX, прозрачный шеринг</li>
+          <li>Замена и сервис — на нас</li>
+          <li>Выход из договора без штрафа</li>
+        </ul>
+        <div class="way__price way__price--alt">
+          <span>ваша доля</span><b>%</b><i>от выручки</i>
+        </div>
+        <a class="btn btn--primary btn--block" href="#cta" data-prefill="haas">Хочу так →</a>
+      </article>
+
+      <article class="way">
+        <div class="way__top">
+          <span class="way__num">03</span>
+          <span class="way__chip">CAPEX · Trade-in</span>
+        </div>
+        <h3>Весь холодильник</h3>
+        <p class="way__lead">Новое оборудование с уже встроенной RDDU-1. Старый холодильник — в трейд-ин. Идёт под обновление парка.</p>
+        <ul class="way__list">
+          <li>Энергоэффективный корпус</li>
+          <li>RDDU-1 «из коробки»</li>
+          <li>Зачёт старого оборудования</li>
+        </ul>
+        <div class="way__price">
+          <span>от</span><b>$</b><i>по запросу</i>
+        </div>
+        <a class="btn btn--ghost btn--block" href="#cta" data-prefill="full">Запросить расчёт</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- VS -->
+<section class="section section--alt" id="vs">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="eyebrow">Сравнение</span>
+      <h2 class="h2">RDDU-1 vs обычный Digital Signage</h2>
+      <p class="sec-sub">Экран у полки работает не как ТВ в зале, а как продавец рядом с товаром.</p>
+    </header>
+
+    <div class="vs">
+      <div class="vs__row vs__row--head">
+        <div></div>
+        <div class="vs__col">Обычный Digital Signage</div>
+        <div class="vs__col vs__col--us">RDDU-1</div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__lab">Место контакта</div>
+        <div class="vs__col">Стена, потолок, касса</div>
+        <div class="vs__col vs__col--us">Сама дверь холодильника</div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__lab">Момент решения о покупке</div>
+        <div class="vs__col">До полки</div>
+        <div class="vs__col vs__col--us">У полки, рука уже тянется</div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__lab">Связка с остатками</div>
+        <div class="vs__col">Нет</div>
+        <div class="vs__col vs__col--us">Прямая интеграция с POS</div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__lab">Влияние на продажи</div>
+        <div class="vs__col">Косвенное</div>
+        <div class="vs__col vs__col--us">+8% Sales Lift по пилотам</div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__lab">Капвложения</div>
+        <div class="vs__col">На стороне арендатора</div>
+        <div class="vs__col vs__col--us">0 ₽ в варианте HaaS</div>
+      </div>
+      <div class="vs__row">
+        <div class="vs__lab">Цена за установку</div>
+        <div class="vs__col">$2 500 – $6 000</div>
+        <div class="vs__col vs__col--us">от $1 200 / дверь</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="section" id="fit">
+  <div class="wrap fit__grid">
+    <div>
+      <span class="eyebrow">Совместимость</span>
+      <h2 class="h2">Подходит к модулю 600 мм</h2>
+      <p class="lead lead--dark">
+        RDDU-1 рассчитана на стандартный модуль витринной двери 600 мм —
+        это покрывает основную долю холодильников ритейла и HoReCa в РФ и СНГ.
+      </p>
+      <ul class="fit__list">
+        <li><b>Ширина модуля:</b> 600 мм (одинарная) / 1200 мм (сдвоенная)</li>
+        <li><b>Стекло:</b> закалённое, антибликовое, морозоустойчивое до −25 °C</li>
+        <li><b>Питание:</b> 220 В · PoE-вариант для сетей</li>
+        <li><b>Интеграции:</b> 1С, iiko, R-Keeper, собственный POS — по API</li>
+        <li><b>Удалённое управление:</b> контент, плейлисты, OTA-обновления</li>
+      </ul>
+    </div>
+    <aside class="fit__card">
+      <div class="fit__cardHead">Не уверены, подойдёт ли парк?</div>
+      <p>Пришлите фото и модели холодильников — за 1 рабочий день вернёмся со списком совместимых позиций и оценкой ёмкости сети.</p>
+      <a class="btn btn--primary btn--block" href="#cta" data-prefill="fit">Проверить парк</a>
+    </aside>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <div class="wrap cta__inner">
+    <div class="cta__copy">
+      <span class="eyebrow eyebrow--light">Заявка</span>
+      <h2 class="h2 h2--light">Посчитаем доход вашей сети</h2>
+      <p>Оставьте заявку — пришлём модельный расчёт под ваш парк, формат подключения и срок установки. Без обязательств.</p>
+      <ul class="cta__list">
+        <li>Ответ в течение 1 рабочего дня</li>
+        <li>Подбираем оптимальный из трёх форматов</li>
+        <li>NDA по запросу</li>
+      </ul>
+    </div>
+    <div class="cta__panel">
+      <a class="btn btn--primary btn--xl btn--block" id="mailBtn" href="#">
+        Написать на partners@rockettv.ru →
+      </a>
+      <div class="cta__or">или</div>
+      <a class="btn btn--ghost btn--block" href="tel:+74951200030">+7 (495) 120-00-30</a>
+      <p class="cta__hint">Нажмите на кнопку — откроется письмо с уже заполненным шаблоном.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="ftr">
+  <div class="wrap ftr__inner">
+    <div class="ftr__brand">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span>RDDU-1 · Rocket TV</span>
+    </div>
+    <div class="ftr__meta">
+      <a href="mailto:partners@rockettv.ru">partners@rockettv.ru</a>
+      <span>© <span id="yr"></span> Rocket TV. Все права защищены.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
