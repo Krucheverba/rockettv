@@ -6,9 +6,10 @@
 <meta name="theme-color" content="#040506" />
 <title>RDDU-1 — Ваш холодильник может зарабатывать</title>
 <meta name="description" content="Цифровая дверь-витрина для торгового холодильника: реклама, +8% к продажам, данные с POS. Три способа подключения, окупаемость 9–12 месяцев." />
+<link rel="preload" as="image" href="assets/hero.png" fetchpriority="high" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,11 +22,11 @@
       <span class="logo__text">RDDU<span>-1</span></span>
     </a>
     <nav class="nav" aria-label="Главная навигация">
-      <a href="#streams">Доходы</a>
       <a href="#math">Расчёт</a>
+      <a href="#how">Как работает</a>
       <a href="#ways">Подключение</a>
       <a href="#vs">Сравнение</a>
-      <a href="#fit">Совместимость</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn--primary btn--sm" href="#cta">Заявка</a>
   </div>
@@ -41,145 +42,81 @@
         <span class="grad">может зарабатывать.</span>
       </h1>
       <p class="lead">
-        Меняем стекло двери на цифровую витрину RDDU-1. Та же дверь — но с экраном,
-        рекламой брендов, остатками из POS и аналитикой в реальном времени.
+        Меняем стекло двери на цифровую витрину RDDU-1. Та же дверь —
+        но с экраном, рекламой брендов и аналитикой в реальном времени.
         Три потока выручки на одном квадратном метре.
       </p>
       <div class="hero__cta">
-        <a class="btn btn--primary" href="#cta">Получить расчёт под мой парк</a>
+        <a class="btn btn--primary" href="#cta">Получить расчёт</a>
         <a class="btn btn--ghost" href="#ways">Как подключиться</a>
       </div>
-      <ul class="hero__bullets" role="list">
-        <li><b>+8%</b> к продажам категории</li>
-        <li><b>9–12 мес</b> окупаемость</li>
-        <li><b>~$2 000</b> в год с двери</li>
-      </ul>
     </div>
 
-    <!-- DOOR MOCKUP -->
-    <div class="hero__mock" aria-hidden="true">
-      <div class="door" id="door">
-        <div class="door__frame">
-          <div class="door__handle"></div>
-          <div class="door__screen">
-            <div class="screen__glare"></div>
-
-            <!-- Ad slide -->
-            <div class="ad ad--show" data-ad="0">
-              <div class="ad__brand">PEPSI MAX</div>
-              <div class="ad__title">Холоднее. Дерзче.</div>
-              <div class="ad__sub">−15% сегодня</div>
-              <div class="ad__bottle"></div>
-            </div>
-            <div class="ad" data-ad="1">
-              <div class="ad__brand">RED BULL</div>
-              <div class="ad__title">Энергия рядом</div>
-              <div class="ad__sub">Полка 2 · 4 банки</div>
-              <div class="ad__bottle ad__bottle--red"></div>
-            </div>
-            <div class="ad" data-ad="2">
-              <div class="ad__brand">МОЛОКО · ЭКО-ФЕРМА</div>
-              <div class="ad__title">Свежая поставка</div>
-              <div class="ad__sub">2 ч назад</div>
-              <div class="ad__bottle ad__bottle--milk"></div>
-            </div>
-
-            <!-- Live HUD overlays -->
-            <div class="hud hud--tl">
-              <span class="hud__dot"></span> LIVE
-            </div>
-            <div class="hud hud--tr">
-              <span class="hud__label">Взгляды/час</span>
-              <span class="hud__val" id="views">128</span>
-            </div>
-            <div class="hud hud--bl">
-              <span class="hud__label">Sales Lift</span>
-              <span class="hud__val hud__val--up">+8.0%</span>
-            </div>
-            <div class="hud hud--br">
-              <span class="hud__label">Остаток · POS</span>
-              <span class="hud__val">SKU 14 · 62%</span>
-            </div>
-
-            <!-- progress bar -->
-            <div class="progress"><i></i></div>
-          </div>
-        </div>
-        <div class="door__shelf">
-          <span></span><span></span><span></span>
-        </div>
+    <div class="hero__media" aria-hidden="true">
+      <div class="hero__glow"></div>
+      <div class="hero__img">
+        <img
+          src="assets/hero.png"
+          alt=""
+          width="1536" height="1024"
+          loading="eager" fetchpriority="high"
+          decoding="async" />
       </div>
-      <div class="floor"></div>
-      <div class="badge-roi">
-        <span>ROI</span>
-        <b>~28.5%</b>
-      </div>
-      <div class="badge-haas">
-        <span>HaaS</span>
-        <b>0 ₽ CAPEX</b>
-      </div>
+    </div>
+  </div>
+
+  <!-- trust strip -->
+  <div class="wrap trust">
+    <span class="trust__label">В пилотах и инсталляциях</span>
+    <div class="trust__logos" aria-label="Наши партнёры и рекламодатели">
+      <span>PEPSI</span>
+      <span>RED BULL</span>
+      <span>BALTIKA</span>
+      <span>JACOBS</span>
+      <span>NESTLÉ</span>
+      <span>МАГНИТ</span>
     </div>
   </div>
 </section>
 
-<!-- STREAMS -->
-<section class="section" id="streams">
+<!-- MATH + STREAMS (merged) -->
+<section class="section" id="math">
   <div class="wrap">
     <header class="sec-head">
-      <span class="eyebrow">Три потока дохода</span>
-      <h2 class="h2">Одна дверь — три источника выручки</h2>
-      <p class="sec-sub">Реклама, прирост продаж и данные. Работают одновременно, а не по очереди.</p>
-    </header>
-
-    <div class="cards">
-      <article class="card">
-        <div class="card__icon">📺</div>
-        <h3>Реклама на дверце</h3>
-        <p>Контракты с FMCG-брендами и локальными игроками. Гарантированные показы, измеримая аудитория, формат — как наружка, только у самой полки.</p>
-        <div class="card__tag">CPM-модель</div>
-      </article>
-      <article class="card card--accent">
-        <div class="card__icon">📈</div>
-        <h3>+8% к продажам</h3>
-        <p>Витрина подсвечивает товар в момент решения. По нашим пилотам — средний прирост продаж представленных SKU около <b>+8%</b>.</p>
-        <div class="card__tag">Sales Lift</div>
-      </article>
-      <article class="card">
-        <div class="card__icon">🧠</div>
-        <h3>Данные и аналитика</h3>
-        <p>Просмотры, конверсия в касание, остатки из POS, эффективность акций. Свой кабинет и API — либо готовые отчёты раз в неделю.</p>
-        <div class="card__tag">Dashboards · API</div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- MATH -->
-<section class="section section--alt" id="math">
-  <div class="wrap">
-    <header class="sec-head">
-      <span class="eyebrow">Модельный расчёт</span>
+      <span class="eyebrow">Экономика</span>
       <h2 class="h2">Четыре цифры, которые важны собственнику</h2>
-      <p class="sec-sub">Расчёт на одну дверь в среднем по сети. Ориентир по модели — не оферта и не гарантия.</p>
+      <p class="sec-sub">Расчёт на одну дверь по модели среднего ритейла. Ориентир, не оферта.</p>
     </header>
 
     <div class="stats">
       <div class="stat">
-        <div class="stat__num">~$2K</div>
-        <div class="stat__lab">Доход в год с двери</div>
-        <div class="stat__hint">Реклама + Sales Lift</div>
+        <div class="stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="13" rx="1.5"/><path d="M8 21h8M12 17.5V21"/></svg>
+        </div>
+        <div class="stat__num">~$2K<span>/год</span></div>
+        <div class="stat__lab">Реклама на дверце</div>
+        <div class="stat__hint">CPM-контракты с FMCG</div>
       </div>
       <div class="stat">
+        <div class="stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        </div>
+        <div class="stat__num">+8<span>%</span></div>
+        <div class="stat__lab">Sales Lift категории</div>
+        <div class="stat__hint">Прирост продаж SKU на двери</div>
+      </div>
+      <div class="stat">
+        <div class="stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M20 19V9"/><path d="M12 19V13"/><path d="M3 19h18"/></svg>
+        </div>
         <div class="stat__num">9–12<span>мес</span></div>
         <div class="stat__lab">Окупаемость</div>
         <div class="stat__hint">CAPEX-сценарий</div>
       </div>
       <div class="stat">
-        <div class="stat__num">~28.5<span>%</span></div>
-        <div class="stat__lab">ROI</div>
-        <div class="stat__hint">К концу 1-го года</div>
-      </div>
-      <div class="stat">
+        <div class="stat__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 9c0-1.5 1.5-2.5 3-2.5s3 1 3 2.5-1.5 2-3 2-3 .5-3 2 1.5 2.5 3 2.5 3-1 3-2.5"/><path d="M12 5v14"/></svg>
+        </div>
         <div class="stat__num">50–70<span>%</span></div>
         <div class="stat__lab">Маржа оператора</div>
         <div class="stat__hint">После шеринга с собственником</div>
@@ -187,10 +124,37 @@
     </div>
 
     <p class="disclaimer">
-      * Цифры приведены как ориентир по бизнес-модели и не являются публичной офертой
-      или гарантией дохода. Фактические показатели зависят от трафика точки, ассортимента,
-      рекламных контрактов и условий шеринга. Точный расчёт — после аудита парка.
+      * Цифры — ориентир по модели. Фактические показатели зависят от трафика точки,
+      ассортимента и условий шеринга. Точный расчёт — после аудита парка.
     </p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section--alt" id="how">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="eyebrow">Как это работает</span>
+      <h2 class="h2">От заявки до первой выручки — 4–6 недель</h2>
+    </header>
+
+    <div class="steps">
+      <article class="step">
+        <span class="step__num">01</span>
+        <h3>Аудит парка</h3>
+        <p>Присылаете список / фото холодильников. Возвращаем перечень совместимых позиций и ёмкость сети — за 1 рабочий день.</p>
+      </article>
+      <article class="step">
+        <span class="step__num">02</span>
+        <h3>Монтаж за смену</h3>
+        <p>Снимаем штатное стекло, ставим RDDU-1 на ту же раму. Точка не закрывается на ремонт — установка укладывается в одну смену.</p>
+      </article>
+      <article class="step">
+        <span class="step__num">03</span>
+        <h3>Первая выручка</h3>
+        <p>Запускаем рекламные кампании и интегрируем POS. Первые отчёты по просмотрам и Sales Lift — через 2–3 недели после старта.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -200,7 +164,6 @@
     <header class="sec-head">
       <span class="eyebrow">Три способа подключиться</span>
       <h2 class="h2">Выберите формат под свой парк</h2>
-      <p class="sec-sub">От замены одного стекла до полной замены оборудования с трейд-ином.</p>
     </header>
 
     <div class="ways">
@@ -210,15 +173,11 @@
           <span class="way__chip">CAPEX</span>
         </div>
         <h3>Только дверца</h3>
-        <p class="way__lead">Меняем стекло на RDDU-1 прямо на штатной раме холодильника. Быстрый монтаж, без замены корпуса.</p>
+        <p class="way__lead">Меняем стекло на RDDU-1 прямо на штатной раме. Без замены корпуса, монтаж за смену.</p>
         <ul class="way__list">
           <li>Совместимость с модулем 600 мм</li>
-          <li>Установка за смену</li>
           <li>Гарантия и сервис</li>
         </ul>
-        <div class="way__price">
-          <span>стоимость</span><b>—</b><i>по запросу</i>
-        </div>
         <a class="btn btn--ghost btn--block" href="#cta" data-prefill="door">Запросить расчёт</a>
       </article>
 
@@ -229,10 +188,10 @@
           <span class="way__chip way__chip--accent">HaaS · Revenue share</span>
         </div>
         <h3>Дверца по подписке</h3>
-        <p class="way__lead">Мы ставим RDDU-1 за свой счёт. Собственник получает долю с рекламной выручки и +8% продаж. Никаких капвложений.</p>
+        <p class="way__lead">Ставим RDDU-1 за свой счёт. Собственник получает долю с рекламной выручки и +8% продаж.</p>
         <ul class="way__list">
           <li>0 ₽ CAPEX, прозрачный шеринг</li>
-          <li>Замена и сервис — на нас</li>
+          <li>Сервис и замена — на нас</li>
           <li>Выход из договора без штрафа</li>
         </ul>
         <div class="way__price way__price--alt">
@@ -244,18 +203,14 @@
       <article class="way">
         <div class="way__top">
           <span class="way__num">03</span>
-          <span class="way__chip">CAPEX · Trade-in</span>
+          <span class="way__chip">Trade-in</span>
         </div>
         <h3>Весь холодильник</h3>
-        <p class="way__lead">Новое оборудование с уже встроенной RDDU-1. Старый холодильник — в трейд-ин. Идёт под обновление парка.</p>
+        <p class="way__lead">Новое оборудование с уже встроенной RDDU-1. Старый холодильник — в трейд-ин.</p>
         <ul class="way__list">
           <li>Энергоэффективный корпус</li>
-          <li>RDDU-1 «из коробки»</li>
           <li>Зачёт старого оборудования</li>
         </ul>
-        <div class="way__price">
-          <span>стоимость</span><b>—</b><i>по запросу</i>
-        </div>
         <a class="btn btn--ghost btn--block" href="#cta" data-prefill="full">Запросить расчёт</a>
       </article>
     </div>
@@ -268,7 +223,6 @@
     <header class="sec-head">
       <span class="eyebrow">Сравнение</span>
       <h2 class="h2">RDDU-1 vs обычный Digital Signage</h2>
-      <p class="sec-sub">Экран у полки работает не как ТВ в зале, а как продавец рядом с товаром.</p>
     </header>
 
     <div class="vs">
@@ -283,19 +237,9 @@
         <div class="vs__col vs__col--us">Сама дверь холодильника</div>
       </div>
       <div class="vs__row">
-        <div class="vs__lab">Момент решения о покупке</div>
-        <div class="vs__col">До полки</div>
-        <div class="vs__col vs__col--us">У полки, рука уже тянется</div>
-      </div>
-      <div class="vs__row">
-        <div class="vs__lab">Связка с остатками</div>
-        <div class="vs__col">Нет</div>
-        <div class="vs__col vs__col--us">Прямая интеграция с POS</div>
-      </div>
-      <div class="vs__row">
         <div class="vs__lab">Влияние на продажи</div>
-        <div class="vs__col">Косвенное</div>
-        <div class="vs__col vs__col--us">+8% Sales Lift по пилотам</div>
+        <div class="vs__col">Косвенное, не измеряется</div>
+        <div class="vs__col vs__col--us">+8% Sales Lift, интеграция с POS</div>
       </div>
       <div class="vs__row">
         <div class="vs__lab">Капвложения</div>
@@ -314,26 +258,64 @@
 <!-- FIT -->
 <section class="section" id="fit">
   <div class="wrap fit__grid">
-    <div>
-      <span class="eyebrow">Совместимость</span>
-      <h2 class="h2">Подходит к модулю 600 мм</h2>
-      <p class="lead lead--dark">
-        RDDU-1 рассчитана на стандартный модуль витринной двери 600 мм —
-        это покрывает основную долю холодильников ритейла и HoReCa в РФ и СНГ.
-      </p>
+    <div class="fit__media" aria-hidden="true">
+      <img
+        src="assets/fit.png"
+        alt=""
+        width="1024" height="1536"
+        loading="lazy" decoding="async" />
+    </div>
+    <div class="fit__copy">
+      <header class="sec-head sec-head--left">
+        <span class="eyebrow">Совместимость</span>
+        <h2 class="h2">Подходит к модулю 600 мм</h2>
+        <p class="sec-sub">Покрывает основную долю холодильников ритейла и HoReCa в РФ и СНГ.</p>
+      </header>
+
       <ul class="fit__list">
-        <li><b>Ширина модуля:</b> 600 мм (одинарная) / 1200 мм (сдвоенная)</li>
-        <li><b>Стекло:</b> закалённое, антибликовое, морозоустойчивое до −25 °C</li>
-        <li><b>Питание:</b> 220 В · PoE-вариант для сетей</li>
+        <li><b>Ширина модуля:</b> 600 мм (одинарная) или 1200 мм (сдвоенная)</li>
+        <li><b>Стекло:</b> закалённое, антибликовое, до −25 °C</li>
         <li><b>Интеграции:</b> 1С, iiko, R-Keeper, собственный POS — по API</li>
-        <li><b>Удалённое управление:</b> контент, плейлисты, OTA-обновления</li>
+        <li><b>Управление контентом:</b> удалённо, OTA-обновления</li>
       </ul>
     </div>
-    <aside class="fit__card">
-      <div class="fit__cardHead">Не уверены, подойдёт ли парк?</div>
-      <p>Пришлите фото и модели холодильников — за 1 рабочий день вернёмся со списком совместимых позиций и оценкой ёмкости сети.</p>
-      <a class="btn btn--primary btn--block" href="#cta" data-prefill="fit">Проверить парк</a>
-    </aside>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section--alt" id="faq">
+  <div class="wrap faq__wrap">
+    <header class="sec-head sec-head--left">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="h2">Что чаще всего спрашивают</h2>
+    </header>
+
+    <div class="faq">
+      <details class="faq__item">
+        <summary>Сколько по времени занимает монтаж?</summary>
+        <p>Замена стекла на RDDU-1 — одна смена. Точка не закрывается, оборудование за день готово к работе.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Что с энергопотреблением и счётом за электричество?</summary>
+        <p>RDDU-1 потребляет порядка 70–110 Вт в зависимости от яркости и контента. Это меньше, чем средняя LED-подсветка торговой зоны. В пилотах прирост счёта на дверь не превышал 60–90 ₽/мес.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Не запотевает ли экран и что с конденсатом?</summary>
+        <p>Стекло конструктивно греется по периметру, как у штатных витринных дверей. Защита от конденсата — до −25 °C, в стандартных холодильниках напитков и заморозки работает без оговорок.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Как считается шеринг в варианте HaaS?</summary>
+        <p>Прозрачно: вы видите выручку по рекламным контрактам в личном кабинете, отчисление собственнику — фиксированный процент от неё. Условия — в договоре, без скрытых вычетов.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Что если оборудование выйдет из строя?</summary>
+        <p>В HaaS — замена и сервис на нашей стороне за наш счёт. В CAPEX-сценариях — гарантия 24 месяца плюс сервисный контракт с SLA по замене.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Можно ли отказаться от договора?</summary>
+        <p>В подписке — да, без штрафа: предупреждение за 60 дней, мы снимаем оборудование и возвращаем штатное стекло. В CAPEX отказ не нужен — оборудование ваше.</p>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -343,12 +325,7 @@
     <div class="cta__copy">
       <span class="eyebrow">Заявка</span>
       <h2 class="h2">Посчитаем доход вашей сети</h2>
-      <p>Оставьте заявку — пришлём модельный расчёт под ваш парк, формат подключения и срок установки. Без обязательств.</p>
-      <ul class="cta__list">
-        <li>Ответ в течение 1 рабочего дня</li>
-        <li>Подбираем оптимальный из трёх форматов</li>
-        <li>NDA по запросу</li>
-      </ul>
+      <p>Пришлите парк — вернёмся с модельным расчётом, форматом подключения и сроком монтажа. Без обязательств, ответ в течение рабочего дня.</p>
     </div>
     <div class="cta__panel">
       <a class="btn btn--primary btn--xl btn--block" id="mailBtn" href="#">
@@ -356,7 +333,7 @@
       </a>
       <div class="cta__or">или</div>
       <a class="btn btn--ghost btn--block" href="tel:+74951200030">+7 (495) 120-00-30</a>
-      <p class="cta__hint">Нажмите на кнопку — откроется письмо с уже заполненным шаблоном.</p>
+      <p class="cta__hint">По клику откроется письмо с заполненным шаблоном.</p>
     </div>
   </div>
 </section>
